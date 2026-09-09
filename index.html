@@ -6,8 +6,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Assignment 02</title>
 </head>
-<body class="bg-[#1A0A2D] w-full">
-    <header class="border-b-[1px] border-b-[#2D1749]">
+<body class="w-full">
+    <header class="border-b-[1px] border-b-[#2D1749] bg-[#1A0A2D]">
         <nav class="flex justify-between gap-5 text-white w-5xl mx-auto min-h-[60px] p-[20px]">
             <div class="font-bold text-3xl logo">Tech<span class="text-rose-600">Wave</span></div>
             <div class="menu">
@@ -23,7 +23,11 @@
         </nav>
     </header>
     <main>
-        <div class="hero mx-auto h-screen w-full bg-no-repeat bg-center bg-[url(assets/hero-circle.png)]"></div>
+        <div class="banner h-screen w-full bg-cover bg-center bg-no-repeat bg-[url('/assets/hero-bg.png')] relative">
+            <img class="absolute h-[318px] w-[318px] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/hero-circle.png" alt="">
+            <span class="items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Badge</span>
+            <img class="absolute w-[116] h-[175] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/microphone.png" alt="">
+        </div>
     </main>
     <footer></footer>
 </body>
