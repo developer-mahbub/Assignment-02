@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Assignment 02</title>
 </head>
 <body class="w-full">
@@ -23,11 +24,31 @@
         </nav>
     </header>
     <main>
+        <section id="banner">
         <div class="banner h-screen w-full bg-cover bg-center bg-no-repeat bg-[url('/assets/hero-bg.png')] relative">
             <img class="absolute h-[300px] w-[300px] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/hero-circle.png" alt="">
-            <img class="absolute w-[116] h-[175] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/microphone.png" alt="">
+            <img class="absolute w-[116px] h-[175px] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/microphone.png" alt="">
             <span class="absolute top-18 right-[40%] rounded-full bg-[#00FF88] items-center px-[16px] py-[8px] text-black font-bold">NEW</span>
+            <div class="absolute inset-5 flex flex-col justify-end items-center pb-20">
+                <div class="text-center">
+                    <h3 class="text-5xl text-white mb-[24px]">TechWave</h3>
+                    <p class="text-white mb-[24px]">Your daily dose of tech insights, productivity hacks, and personal growth</p>
+                    <div class="button-wrapper text-white flex gap-[8px]  justify-center">
+                       
+                        <button class="spotify flex bg-linear-to-tr from-[#fada08] to-[#f304b7] px-[20px] py-[8px] rounded-full gap-[8px] w-[201px] h-[44px] items-center">
+                            <img src="assets/spotify.png" alt="" class="w-[16.67px] h-[16.67px]">
+                            <span>Listen on Spotify</span>
+                        </button>
+
+                        <button class="subscribe flex px-[20px] py-[8px] rounded-full gap-[8px] w-[147px] h-[44px] items-center border-2 border-[#00FF88]">
+                            <img src="assets/message.png" alt="" class="w-[17.78px] h-[13.33px]">
+                            <span>Subscribe</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+        </section>
     </main>
     <footer></footer>
 </body>
