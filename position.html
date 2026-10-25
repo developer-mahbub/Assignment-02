@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assignment 02</title>
+</head>
+<body>
+
+<nav class="bg-white shadow-md">
+  <!-- Navbar Container -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Brand Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <span class="text-xl font-bold text-gray-900">BrandLogo</span>
+      </div>
+
+      <!-- Desktop Menu (Hidden on Mobile, Visible on MD+ Screens) -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Home</a>
+        <a href="#" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Features</a>
+        <a href="#" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Pricing</a>
+        <a href="#" class="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Contact</a>
+      </div>
+
+      <!-- Hamburger Button (Visible on Mobile, Hidden on MD+ Screens) -->
+      <div class="flex items-center md:hidden">
+        <button id="mobile-menu-btn" type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Toggle menu">
+          <!-- Hamburger Icon SVG -->
+          <svg class="h-6 w-6" xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu Dropdown (Hidden by default via 'hidden') -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-b border-gray-200">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#" class="block text-gray-700 hover:bg-gray-100 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">Home</a>
+      <a href="#" class="block text-gray-700 hover:bg-gray-100 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">Features</a>
+      <a href="#" class="block text-gray-700 hover:bg-gray-100 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+      <a href="#" class="block text-gray-700 hover:bg-gray-100 hover:text-indigo-600 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<br>
+
+<div class="relative w-80 h-52 overflow-hidden rounded-xl shadow-lg">
+  <!-- Image -->
+  <img 
+    src="https://images.unsplash.com/photo-1791732978488-f580756a40f7?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" 
+    alt="Sample Image" 
+    class="w-full h-full object-cover"
+  />
+
+  <!-- Positioned Span 1 (Top-Left Badge) -->
+  <span class="absolute top-3 left-3 bg-black/60 text-white text-xs font-semibold px-2.5 py-1 rounded-md backdrop-blur-sm">
+    Featured
+  </span>
+
+  <!-- Positioned Span 2 (Bottom-Right Label) -->
+  <span class="absolute bottom-3 right-3 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+    $49.99
+  </span>
+</div>
+
+
+
+<br>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+    // Toggles the visibility of the mobile menu
+        mobileMenu.classList.toggle('hidden');
+    });
+    });
+
+</script>
+</body>
+</html>

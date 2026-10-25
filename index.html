@@ -9,47 +9,91 @@
 </head>
 <body class="w-full">
     <header class="border-b-[1px] border-b-[#2D1749] bg-[#1A0A2D]">
-        <nav class="flex justify-between gap-5 text-white w-5xl mx-auto min-h-[60px] p-[20px]">
-            <div class="font-bold text-3xl logo">Tech<span class="text-rose-600">Wave</span></div>
-            <div class="menu">
-                <ul class="flex gap-5">
+        <nav class="text-white w-full top-0 min-h-[60px] p-[20px]">
+            <div class="max-w-5xl flex items-center justify-between gap-5 mx-auto">
+                <a href="#" class="font-bold text-3xl logo">Tech<span class="text-rose-600">Wave</span></a>
+                <!-- Desktop menu -->
+                <div class="menu hidden md:block">
+                    <ul class="flex gap-5">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Episodes</a></li>
+                        <li><a href="#">Host</a></li>
+                    </ul>
+                </div>
+                <div class="hidden md:block">
+                    <button class="bg-gradient-to-r from-fuchsia-500 to-cyan-500 py-[5px] px-[12px] rounded-xl">Subscrube &rarr;</button>
+                </div>
+                <!-- Mobile menu button -->
+                 <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-500 hover:text-gray-700 focus:outline-none" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                 </div>
+            </div>
+            <!-- Mobile Menu Items -->
+             <div id="mobile-menu" class="hidden md:hidden bg-[#1A0A2D] text-right">
+                <ul class="flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3 gap-5">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Episodes</a></li>
                     <li><a href="#">Host</a></li>
+                    <li>
+                        <button class="bg-gradient-to-r from-fuchsia-500 to-cyan-500 py-[5px] px-[12px] rounded-xl">Subscrube &rarr;</button>
+                    </li>
                 </ul>
-            </div>
-            <div class="button">
-                <button class="bg-gradient-to-r from-fuchsia-500 to-cyan-500 pt-[5px] pb-[6px] pr-[12px] pl-[12px] rounded-xl">Subscribe &rarr;</button>
-            </div>
+             </div>
         </nav>
     </header>
     <main>
+        <!-- Banner Start -->
         <section id="banner">
-        <div class="banner h-screen w-full bg-cover bg-center bg-no-repeat bg-[url('/assets/hero-bg.png')] relative">
+        <div class="banner w-full min-h-screen bg-cover bg-center bg-no-repeat bg-[url('assets/hero-bg.png')] relative">
             <img class="absolute h-[300px] w-[300px] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/hero-circle.png" alt="">
             <img class="absolute w-[116px] h-[175px] top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/microphone.png" alt="">
             <span class="absolute top-18 right-[40%] rounded-full bg-[#00FF88] items-center px-[16px] py-[8px] text-black font-bold">NEW</span>
-            <div class="absolute inset-5 flex flex-col justify-end items-center pb-20">
+            <!-- 
+            <div class="absolute inset-10 flex flex-col justify-end items-center">
                 <div class="text-center">
                     <h3 class="text-5xl text-white mb-[24px]">TechWave</h3>
                     <p class="text-white mb-[24px]">Your daily dose of tech insights, productivity hacks, and personal growth</p>
-                    <div class="button-wrapper text-white flex gap-[8px]  justify-center">
+                    <div class="button-wrapper text-white flex justify-center gap-[8px]">
                        
-                        <button class="spotify flex bg-linear-to-tr from-[#fada08] to-[#f304b7] px-[20px] py-[8px] rounded-full gap-[8px] w-[201px] h-[44px] items-center">
-                            <img src="assets/spotify.png" alt="" class="w-[16.67px] h-[16.67px]">
+                        <button class="spotify flex justify-center items-center rounded-full bg-linear-to-tr from-[#fada08] to-[#f304b7] px-[20px] py-[8px] gap-[8px] w-[201px] h-[44px]">
+                            <img src="assets/spotify.png" alt="" class="w-[20px] h-[20px]">
                             <span>Listen on Spotify</span>
                         </button>
 
-                        <button class="subscribe flex px-[20px] py-[8px] rounded-full gap-[8px] w-[147px] h-[44px] items-center border-2 border-[#00FF88]">
-                            <img src="assets/message.png" alt="" class="w-[17.78px] h-[13.33px]">
+                        <button class="subscribe flex justify-center items-center rounded-full px-[20px] py-[8px] gap-[8px] w-[147px] h-[36px] border-2 border-[#00FF88]">
+                            <img src="assets/message.png" alt="" class="w-[20px] h-[20px]">
                             <span>Subscribe</span>
                         </button>
                     </div>
                 </div>
-            </div>
+            </div>   
+              -->
         </div>
         </section>
+        <!-- Banner End -->
+        <!-- About Start -->
+         <section class="about">
+            
+         </section>
+        <!-- About End -->
     </main>
     <footer></footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+    // Toggles the visibility of the mobile menu
+        mobileMenu.classList.toggle('hidden');
+    });
+    });
+
+</script>
 </body>
 </html>
